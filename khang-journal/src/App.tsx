@@ -29,9 +29,10 @@ const App = () => {
 
   const handleOnClickJournal = (id: number, action: string, descriptionNewVal: { date: string, description: string }) => {
     const newJournalList = [...journalList];
+    let newId = 0;
     if (action === 'ADD') {
       newJournalList.unshift({
-        id: 0,
+        id: Math.random(),
         description: '',
         date: '',
         time: '',
